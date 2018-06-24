@@ -1,24 +1,27 @@
 
 
-const carname = document.querySelector (.carname)
+const carname = document.querySelector (".carname")
 
-const caryear = document.querySelector (.caryear)
+const carcolor = document.querySelector (".carcolor")
 
-const caradd = document.querySelector (.caradd)
+const caryear = document.querySelector (".caryear")
+
+const caradd = document.querySelector (".caradd")
 
 
 let carList = []
 
-if (window.localStorage.data !== undefined) {
-    carList = carList.concat(JSON.parse(window.localStorage)
-}
+//if (window.localStorage.data !== undefined) {
+ //   carList = carList.concat(JSON.parse(window.localStorage))
+//}
 
 
-caradd.addEventListener("click", () =>{
+caradd.addEventListener("click", () => {
 
     carList.push({
-        name:carname.value,
-        year:caryear.value
+        name: carname.value,
+        color:carcolor.value,
+        year: caryear.value
     })
     carname.value = ""
 })

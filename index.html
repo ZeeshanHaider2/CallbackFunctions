@@ -1,19 +1,24 @@
 
 
-<html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+        </head>
+        <body>
+            <h1>List of cars</h1>
+            <label for="CarName">Car Name:</label>
+            <input type="text" name="carName" class = "carname" ><br>
+            <label for="CarColor">Car Color:</label>
+            <input type="text" name="carColor" class = "carcolor" ><br>
+            <label for="yearOfManufacture">Year of manufacture:</label>
+            <input type="number" name="yearOfManufacture" class = "caryear" ><br>
+            <button type="button" class ="caradd" >Save</button>
 
-        <html>
-                <body>
-                
-                <form >
-                Car name: <input type="text" name="name" value=""><br>
-                Car year: <input type="text" name="Year" value=""><br>
-                <input type="submit" value="Submit">
-                </form>
-                
-                <p>Click the "Submit" button.</p>
-                
-                </body>
-                </html>
-
-</html>
+           <div id = "list"></div>
+           <div id = "list2"></div>
+        </body>
+        <script src="script.js"></script>
+        </html>
