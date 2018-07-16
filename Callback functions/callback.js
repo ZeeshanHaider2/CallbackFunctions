@@ -41,7 +41,7 @@ console.log(calc(2,3,add));
 console.log(calc(2,3, doWhatever));
 
 //Also possible:
-//this is anonymous funtion, there is no need to define a function and pass it, when you have to use something only once,just write it as an argument
+//this is an anonymous function, there is no need to define it and pass it, when you have to use something only once, just write it as an argument.
 console.log(calc(2,3, function(a,b){
     return a - b;
 }));
