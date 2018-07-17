@@ -1,5 +1,5 @@
 //A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
-
+//https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced
 //EXample 01
 function greeting(name) {
     alert('Hello ' + name);
@@ -10,7 +10,7 @@ function greeting(name) {
     callback(name);
   }
   
-  processUserInput(greeting);
+ // processUserInput(greeting);
 
 
 //Example 02
@@ -61,3 +61,43 @@ console.log(calc(2,3, doWhatever));
 console.log(calc(2,3, function(a,b){
     return a - b;
 }));
+
+
+//Another very good explaination 
+
+var users = ["Zeeshan", "Martin","Sunil"];
+
+function addUser(username){
+    setTimeout(function(){
+        users.push(username);
+    }, 1700); //since the time delay is more, the fuction getUsers will finish faster BUT we want to add users first before we get users.
+}
+
+function getUsers(){
+    setTimeout(function(){
+        console.log(users);
+    }, 100);
+}
+
+addUser("abdula");
+getUsers();
+
+//Now we will use Callback to solve this problem
+
+var users = ["Zeeshan", "Martin","Sunil"];
+
+function addUser(username, callback){ //added callback to enforece the order of operation i.e.addUser will run first 
+    setTimeout(function(){
+        users.push(username);
+        callback();
+    }, 1700); 
+}
+
+function getUsers(){
+    setTimeout(function(){
+        console.log(users);
+    }, 100);
+}
+
+addUser("Sarah", getUsers);
+
