@@ -10,7 +10,7 @@ function greeting(name) {
     callback(name);
   }
   
- // processUserInput(greeting);
+  processUserInput(greeting);
 
 
 //Example 02
@@ -63,7 +63,7 @@ console.log(calc(2,3, function(a,b){
 }));
 
 
-//Another very good explaination 
+//Another very good explaination (The best example)
 
 var users = ["Zeeshan", "Martin","Sunil"];
 
